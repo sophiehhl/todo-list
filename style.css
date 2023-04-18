@@ -1,0 +1,160 @@
+:root{
+--clr-warning: rgb;
+}
+
+body {
+    margin: 5rem 0 0 0;
+    background-color: rgb(135, 194, 248);
+    color: rgb(59, 59, 59);
+    font-family: 'Lexend Deca', sans-serif;
+    align-items: baseline;
+    display: grid;
+    grid: 
+    "... lists active ..." auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.all-tasks{
+    margin: 0 20px 0 20px;
+    grid-area: lists;
+    border: 10px;
+    border-color: rgb(59, 59, 59);
+    background-color: rgb(252, 252, 187);
+    padding: 1rem 1rem;
+    box-shadow: 0 0 2px 10px rgb(252, 252, 187);
+    border-radius: 2px;
+}
+
+.task-list{
+    font-size: 15px;
+    line-height: 2;
+    padding-left: 1.1em;
+}
+
+.list-title {
+    margin: 0;
+    padding-bottom: 5px;
+    border-bottom: 1.5px solid rgb(192, 192, 192);
+}
+
+.list-name{
+    cursor: pointer;
+}
+
+.list-name:hover{
+    opacity: 0.2;
+}
+
+.active-list{
+    font-weight: bold;
+}
+
+.current-tasks{
+    margin: 0 20px 0 20px;
+    padding: 1rem 1rem;
+    grid-area: active;
+    border: 10px;
+    border-color: rgb(59, 59, 59);
+    background-color: rgb(187, 252, 190);
+    box-shadow: 0 0 2px 10px  rgb(187, 252, 190);
+    border-radius: 2px;
+}
+
+.selected-tasks {
+    position: relative;
+}
+
+.task-header{
+    margin: 0;
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1.5px solid rgb(192, 192, 192);
+}
+
+.task-count {
+    margin: 0;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.selected-title {
+    margin: 0 1em 0 0;
+}
+
+.tasks{
+    margin: 15px 0 15px 0;
+    line-height: 2;
+}
+
+.opacity:hover{
+    opacity: .6;
+}
+
+form{
+    display: flex;
+}
+
+.new{
+background: transparent;
+border: 0;
+border-bottom: 1px solid rgb(59, 59, 59);
+font-size: 13px;
+outline: none;
+order: 2;
+
+transition: border-bottom 150ms ease-in;
+}
+
+.new:focus{
+    border-bottom-width: 2px;
+}
+
+.new:focus::placeholder{
+    opacity: .5;
+}
+
+.btn{
+    cursor: pointer;
+    background: 0;
+    border: 0;
+    padding: 0;
+    color: inherit;
+}
+
+.btn.create{
+    color:rgb(59, 59, 59);
+    font-size: large;
+    padding-right: 10px;
+}
+
+
+.btn.create:hover{
+    color:rgb(135, 194, 248);
+}
+
+input[type=checkbox]:checked + label{
+    opacity: .5;
+    text-decoration: line-through;
+}
+
+.selected-tasks input[type=checkbox]{
+    
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    accent-color: rgb(68, 240, 68);
+}
+
+.delete{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(94, 49, 49);
+    font-size: 10px;
+}
+
+.btn.delete:hover{
+    color: red;
+}

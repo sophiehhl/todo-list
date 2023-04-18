@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do Lists</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/52fa31ede0.js" crossorigin="anonymous"></script>
+    <script defer src ="./script.js" ></script>
+</head>
+<body>
+    <div class="all-tasks">
+        <h2 class="list-title">To-do Lists</h2>
+        <ul class="task-list" data-lists>
+            <!-- <li class="list-name active-list">Grocery</li>
+            <li class = "list-name">Car</li>
+            <li class = "list-name">School</li> -->
+        </ul>
+        <div class="add-new-list">
+        <form action = "" data-new-list-form>
+            <input
+            type = "text"
+            class = "new list"
+            data-new-list-input
+            placeholder= "new list name"
+            aria-label = "new list name"
+            />
+            <button class = "btn create"
+                aria-label ="create new list" ><i class="fa-solid fa-plus"></i></button>
+        </form>
+    </div>
+    </div>
+    <div class="current-tasks" data-list-display-container>
+        <div class="task-header">
+        <h2 class ="selected-title" data-list-title></h2>
+        <p class="task-count" data-list-count></p>
+        </div>
+
+        <div class="selected-tasks">
+            <div class="tasks" data-tasks>
+                <template id="task-template">
+                    <div class="task">
+                        <input type = "checkbox"/>
+                        <label class = "opacity">
+                            <span class="custom-checkbox"></span>
+                        </label>
+                    </div>
+                </template>
+            </div>
+            <div class="task-creator">
+                <form action = "" data-new-task-form>
+                <input
+                type = "text"
+                data-new-task-input
+                class = "new task"
+                placeholder= "create new task"
+                aria-label = "create new task"
+                />
+                <button class = "btn create"
+                    aria-label ="create new task"><i class="fa-solid fa-plus"></i></button>
+                </form>
+            </div>
+        
+            <div class="delete">
+                <button class="btn delete" date-clear-completed-task>Clear completed task</button>
+                <button class="btn delete" data-delete-list-btn >Delete List</button>
+            </div>
+        </div>  
+
+    </div>
+
+</body>
+</html>
