@@ -158,3 +158,17 @@ input[type=checkbox]:checked + label{
 .btn.delete:hover{
     color: red;
 }
+
+@media (max-width: 550px) {
+    body{
+        margin-left: 20px;
+        margin-right: 25px;
+        display:block;
+        flex-direction: column;
+    }
+
+    .current-tasks{
+        color: black;
+        margin-top: 50px;
+    }
+}
